@@ -1,0 +1,33 @@
+<main>
+   
+		<section><center>
+			<h2 style="font-size:36px; color:dimgray">Experience the latest technology without the commitment.</h2>
+			<p style="font-size:20px;"> Welcome to Jenil's rental store! Step into the world of cutting-edge technology and find the perfect device to fit your needs.</p>
+		</section></center>
+
+		<section>
+			<h2 style="font-size: 30px;"> Featured Items </h2>
+			<div class="itemObject">
+                {{#each rentals}}
+                    <div class="itemBox">
+
+                        <h3 style="font-size: 24px; color:steelblue">{{this.name}}</h3>
+                        <img src="{{imageUrl}}" alt="{{name}}" height="300px" width="400px">
+                        
+                      {{#if this.availability}}
+                <p>
+                    <form>
+				<input style="font-size: 17px;" type="digits" id="rentdays" name="rentalTime" placeholder="Enter Rental Days">
+				<button style="font-size: 17px;" type="submit">Rent</button>
+			</form> 
+                </p>
+            
+                
+                {{else}}
+                 <p style="font-size:22px;">Already Rented!</p>
+                {{/if}}
+                    </div>
+                {{/each}}
+			</div>
+		</section>
+	</main>
